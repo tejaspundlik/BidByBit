@@ -1,31 +1,13 @@
-target=int(input())
-lenofnum=int(input())
-questionarr=input()
-questionarr=questionarr.split(" ")
-for i in range(lenofnum):
-    questionarr[i]=int(questionarr[i])
-
-arr=[]
-number=15
-
-def decToBinary(number,LEN):
-    arr=[]
-    for i in range(0,LEN):
-        arr.append(number%2)
-        number=number//2
-
-    arr.reverse()
-    return arr
-
-answer=0
-for k in range(0,pow(2,len(questionarr))-1):
- Sum=0
- arr=decToBinary(k,lenofnum)
- for i in range(0,len(questionarr)):
-    if(arr[i]==0):
-        Sum=Sum+questionarr[i]
-    else:
-        Sum=Sum-questionarr[i]
- if(Sum==target):
-    answer+=1
-print(answer)
+str=input()
+str=str.split(" ")
+if(str[-1]==" "):
+    str.pop()
+length=int(str[0])
+length-=2
+x=int(str[1])
+temp=1
+for i in range(length-1):
+    temp=temp*(x-1)
+temp=temp*(x-2)
+temp=temp+1
+print(temp)
