@@ -4,9 +4,9 @@ questionarr=input()
 questionarr=questionarr.split(" ")
 for i in range(lenofnum):
     questionarr[i]=int(questionarr[i])
-
+if(lenofnum!=len(questionarr)):
+    questionarr.pop()
 arr=[]
-number=15
 
 def decToBinary(number,LEN):
     arr=[]
